@@ -69,6 +69,18 @@
 			<artifactId>mapstruct</artifactId>
 			<version>${org.mapstruct.version}</version>
 		</dependency>
+		<!-- Spring Fox Dependencies -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+
 		<!-- JWT related dependencies-->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
@@ -124,9 +136,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<jvmArguments>
+					<!-- <jvmArguments>
 						-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005
-					</jvmArguments>
+					</jvmArguments>  -->
 
 				</configuration>
 			</plugin>

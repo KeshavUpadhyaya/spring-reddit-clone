@@ -13,10 +13,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/api/auth")
 @AllArgsConstructor
+@Slf4j
 public class AuthController {
 
     @Autowired
@@ -25,6 +27,7 @@ public class AuthController {
 
     @PostMapping("/signup")
     public ResponseEntity<String> signup(@RequestBody RegisterRequest registerRequest) {
+    	log.info("inside signup contoller {}", registerRequest);
         authService.signup(registerRequest);
         return new ResponseEntity<>("user registration successful", HttpStatus.OK);
     }
